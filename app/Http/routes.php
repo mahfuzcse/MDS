@@ -37,6 +37,11 @@ Route::get('/alluser/{id}/{name}', function ($id,$name) {
 })->where('id','[0-9]+');;
 
 
+
+
+
+
+
 Route::get('contact','basicController@index');
 
 
