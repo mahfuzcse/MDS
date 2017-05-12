@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-theme.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap-theme.min.css')}}">
@@ -14,9 +14,7 @@
       <script src="{{asset('js/jquery-3.2.0.min.js')}}"></script>
       <script src="{{asset('js/bootstrap.min.js')}}"></script>
       <script src="{{asset('js/bootstrap.js')}}"></script>
-      <script src="{{asset('js/npm.js')}}"></script>
-
-</head>
+      <script src="{{asset('js/npm.js')}}"></script> -->
 
 <style>
 input[type=text], select, textarea {
@@ -49,18 +47,18 @@ input[type=submit]:hover {
     padding: 20px;
 }
 </style>
-
+</head>
 <body>
 <h3>Contact Form</h3>
 
 <div class="container">
   <form action="/action_page.php">
-
+    
     <label for="fname">Name</label>
     <input type="text" id="name" name="name" placeholder="Your name.." required="required" class="form-control"/>
 
 
-    <label for="email">Email</label>
+    <label for="email" class="">Email</label>
     <input type="email" id="email" name="email" placeholder="Your last name.." required="required" class="form-control" />
 
 

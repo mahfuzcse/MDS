@@ -11,20 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    // return view('welcome');
-    return "Home";
-});
-
 Route::get('/about', function () {
     // return view('welcome');
     return "About page";
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-    // return "Home";
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+//     // return "Home";
+// });
+Route::get('contact','basicController@index');
+
+// Route::get('/order', function () 
+//   {
+//      return view('order');
+//   });
+
+
+Route::get('ordergiving','ordercontroller@index');
+Route::get('registration','ordercontroller@reg_index');
+// Route::get('/home', function () 
+//   {
+//      return view('home');
+//   });
+Route::get('home','homeController@index');
 
 Route::get('/alluser', function () {
     return view('user');
@@ -36,13 +46,7 @@ Route::get('/alluser/{id}/{name}', function ($id,$name) {
     return "User ".$id.$name;
 })->where('id','[0-9]+');;
 
-
-
-
-
-
-
-Route::get('contact','basicController@index');
+Route::get('/contact',['as' =>'contact', 'uses'=>'basicController@index']);
 
 
 Route::get('/insert',function(){
@@ -53,6 +57,8 @@ Route::get('/set',function(){
 	DB::table('orders')->insert(['order_No' => 0001,'delivery_date'=>03-02-2012,'delivery_address'=>'Dinajpur','amount'=>4332,'discount'=>25,'payment_status'=>'NO','trx_id'=>1231233221]);
 });
 
+
+Route::resource('course','courseController');
 
 // Route::get('/insert1',function(){
 //    $a = new App\MedicineDelivery;
