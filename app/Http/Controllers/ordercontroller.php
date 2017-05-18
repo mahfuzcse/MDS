@@ -8,15 +8,7 @@ use App\Http\Requests;
 
 class ordercontroller extends Controller
 {
-    public function index(){
     
-    	return view('ordergiving');
 
-    }
-
-     public function reg_index(){
-    
-    	return view('registration');
-
-    }
+     
 }

@@ -13,4 +13,21 @@ class basicController extends Controller
     	return view('contact');
 
     }
+
+    public function reg_index(){
+    
+    	return view('registration');
+
+    }
+
+    public function index1(){
+    
+    	return view('home');
+
+    }
+    public function index11(){
+    
+    	return view('login');
+
+    }
 }
