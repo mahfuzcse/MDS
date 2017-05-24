@@ -11,31 +11,19 @@
 |
 */
 
-Route::get('/about', function () {
-    // return view('welcome');
-    return "About page";
-});
-
-// Route::get('/contact', function () {
-//     return view('contact');
-//     // return "Home";
-// });
-Route::get('contact','basicController@index');
-
-// Route::get('/order', function () 
-//   {
-//      return view('order');
-//   });
-
-
 Route::get('home','basicController@index1');
+Route::get('order','basicController@index2');
 Route::get('login','basicController@index11');
+Route::get('contact','basicController@index3');
 Route::get('registration','basicController@reg_index');
+Route::get('ordersummary','basicController@ordersummaryControl');
+Route::get('orderaddress','basicController@orderaddressControl');
+Route::get('orderpayment','basicController@orderpaymentControl');
 
-// Route::get('/home', function () 
-//   {
-//      return view('home');
-//   });
+
+Route::get('/ab','ordercontroller@insert');
+Route::post('store','ordercontroller@store');
+
 Route::get('home','homeController@index');
 
 Route::get('/alluser', function () {
@@ -66,12 +54,6 @@ Route::get('/mtype',function(){
 
 Route::resource('course','courseController');
 
-// Route::get('/insert1',function(){
-//    $a = new App\MedicineDelivery;
-//    $a->delivery_place ='Rajshahi';
-//    $a->delivery_date = '23-10-2001';
-//    $a->save();
-// });
 
 Route::get('/price',function(){
  $p= new App\MedicineOrder;

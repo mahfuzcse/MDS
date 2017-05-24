@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="{{asset('css/bootstrap.min.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/foundation.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('css/custom.css')}}" />
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('js/vendor/modernizr.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js/vendor/modernizr.js')}}"></script>
+  <!-- <script src="{{asset('js/vendor/underscore-min.js')}}"></script>
+  <script src="js/calendar.js"></script> -->
 
  <style>
     /* Remove the navbar's default rounded borders and increase the 

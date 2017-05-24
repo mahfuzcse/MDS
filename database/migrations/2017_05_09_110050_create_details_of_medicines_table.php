@@ -15,6 +15,7 @@ class CreateDetailsOfMedicinesTable extends Migration
         Schema::create('medicines', function (Blueprint $table) {
             $table->increments('id');
             $table->string('medicine_name');
+            $table->text('img');
             $table->float('unit_price');
             $table->integer('stored_quantity');
             $table->timestamps();

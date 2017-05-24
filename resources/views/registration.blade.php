@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <form role="form">
-      <h2>Please Sign Up <small>It's free...</small></h2>
+      <h3>Your information is safe with us <small>It's free...</small></h3>
       <hr class="colorgraph">
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-6">
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="form-group">
-        <input type="text" name="display_name" id="display_name" class="form-control input-lg" placeholder="Display Name" tabindex="3">
+        <input type="text" name="phoneNO" id="display_name" class="form-control input-lg" placeholder="Phone/Mobile number" tabindex="3">
       </div>
       <div class="form-group">
         <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">

@@ -40,7 +40,7 @@
     <!-- <label for="subject">Subject</label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
     <div class="form-group">
-       <input type="submit" value="Submit">
+       <input type="submit" class="btn btn-info" value="Submit">
     </div>
    
   </form>
