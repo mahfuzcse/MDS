@@ -6,7 +6,6 @@
 <div class="container">
 
 <div class="row" style="margin-top:20px">
-<div class="col-sm-4"> </div>
     <div class="col-sm-5">
 		<form role="form">
 			<fieldset>
@@ -34,7 +33,7 @@
 				</div>
 			</fieldset>
 		</form>
-		<div class="col-sm-3"> </div>
+		
 	</div>
 </div>
 

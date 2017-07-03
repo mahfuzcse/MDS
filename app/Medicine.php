@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Medicine extends Model
 {
-	protected $fillable=['img'];
+	protected $fillable=['medicine_name','img','unit_price','stored_quantity'];
     //
     public function order_details(){
 

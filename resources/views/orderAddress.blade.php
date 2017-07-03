@@ -14,7 +14,7 @@
 		     <div class="col-md-5">  
 		           <div class="form-group">
 		               <label for="order_no">Delivery Date</label>
-		               <input class="form-control" type="text" name="order_no" id="order_no">
+		               <input class="form-control" type="datetime-local" name="order_no" id="order_no">
 		           </div>
 		     </div>
 		  </div>    
@@ -41,15 +41,9 @@
                   </div>  
                 </div>
             </div>
-           <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-           <button type="submit" class="btn btn-info"><a href="{{url('orderpayment')}}">Continue shopping</a></button>
-                  <!--   <div class="form-group">
-		             <label for="address">Adress</label>
-		               <input class="form-control" type="text" name="address" id="address">   
-		           </div>  -->
-		          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
-		          <!-- <input type="hidden" name="_token" value="{{Session::token()}}"> -->       
-		            
+           <div class="col-sm-3" style="margin-left: 625px;">
+           <a class="btn btn-success btn-sm" role="button" href="{{url('orderpayment')}}"><h5 style="color: white;">Continue shopping</h5></a>
+		   </div>         
 
          </form>    
                 
