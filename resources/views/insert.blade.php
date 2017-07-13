@@ -3,7 +3,7 @@
 @section('body-content')
 <form action="{{url('/storeMedicine')}}" method="POST" role="form" enctype="multipart/form-data">
 	{{csrf_field()}}
-	<legend>Form title</legend>
+	<legend>Medicine Insertion</legend>
     <div>
     	@if(session('msg'))
     		<div class="alert alert-success">
@@ -47,7 +47,7 @@
 		  <div class="col-10">
 		    <input class="form-control" type="number" value="{{old('quantity')}}" name="quantity" id="example-email-input">
 		  </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
+           <button type="submit" class="btn btn-primary">Add</button>
 		</div>
 
 	

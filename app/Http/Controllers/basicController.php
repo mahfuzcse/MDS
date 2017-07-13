@@ -6,18 +6,22 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Medicine;
+use App\Order;
+use App\OrderDetail;
+use App\User;
+
 
 class basicController extends Controller
 {
      public function index1(){
-
-        return view('home');
+        $medicines = Medicine::all();
+        return view('home',['medicines'=>$medicines]);
     
     }
     
      public function index2(){
     
-        return view('order');
+        return view('order')->with('md','');
 
     }
 
@@ -30,7 +34,12 @@ class basicController extends Controller
 
         return view('orderAddress');
     }
+     
+    public function medicineDetail(){
 
+        return view('medicineDetail');
+    } 
+    
     public function orderpaymentControl(){
 
         return view('orderPayment');
@@ -65,22 +74,42 @@ class basicController extends Controller
 
         return view('insert');
     }
-  
+    public function menHealthPill(){
 
-    // have to amend  
-    public function delete(Client $client)
+        return view('menHealthPill');
+    }
+
+
+    // user contact 
+    public function storeContactMsg(Request $request)
     {
-        $client->subjects()->detach();
-        $client->delete();
+        $rules = [
+            'name'  => 'required',
+            'email'  =>'required'
+        ];
 
-        return redirect()->action('basicController@');
+        $this->validate($request,$rules);
+        $user                        = new User;
+        $user->name                  = $request->name;
+        $user->email                 = $request->email ;
+        $user->subject               = $request->subject; 
+        $user->msgDesc               = $request->message;
+        $m = $user->save();
+        if($m)
+        {
+            $msg = "user added successfully" ;
+        }
+        else
+        {
+            $msg ="Something wrong" ;
+        }
+        return redirect('/storeContactMsg')->with('msg',$msg);
     }
 
 
 
+
     //medicine storing 
-
-
     public function storeMedicine(Request $request)
     {
         $rules = [
@@ -108,4 +137,53 @@ class basicController extends Controller
         return redirect('/insert')->with('msg',$msg);
 
     }
+
+     public function liveSearch(Request $request)
+    { 
+           $search = $request->id;
+
+        
+            $medicines = Medicine::where('medicine_name','LIKE',"%{$search}%")
+                           ->get();
+
+            return view('ajaxSearch',compact('medicines','search'));
+        
+    }
+
+
+    public function details($id){
+
+        $md  = Medicine::findOrFail($id);
+       
+        return view('medicineDetail',compact('md'));
+    }
+    //user registration
+    public function storeClient(Request $request)
+    {
+        $rules = [
+            'first_name'  => 'required',
+            'last_name'   => 'required',
+            'email'       => 'required'
+        ];
+        $this->validate($request,$rules);
+    
+        $reg                    = new User;
+        $reg->fname             = $request->first_name;
+        $reg->lname             = $request->last_name ;
+        $reg->phNo              = $request->phNo; 
+        $reg->email             = $request->email;
+        $reg->password          = $request->password;
+        $m = $reg->save();
+        if($m)
+        {
+            $msg = "Successfully registered" ;
+        }
+        else
+        {
+            $msg ="Something wrong" ;
+        }
+        return redirect('/registration')->with('msg',$msg);
+
+    }
+
 }

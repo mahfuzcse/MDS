@@ -41,9 +41,20 @@
                   </div>  
                 </div>
             </div>
-           <div class="col-sm-3" style="margin-left: 625px;">
+             <div class="row">
+            <div class="col-md-5">
+				<label>
+					<input type="text" name="tnxId" placeholder="Enter The Transaction ID">
+				</label>
+			    <!-- <div class="text-center">
+			        <button type="submit" class="btn btn-primary btn-lg"><span>Send</span></button>
+			    </div> -->	
+			</div>
+			           <div class="col-sm-3" style="margin-left: 625px;">
            <a class="btn btn-success btn-sm" role="button" href="{{url('orderpayment')}}"><h5 style="color: white;">Continue shopping</h5></a>
-		   </div>         
+		   </div>
+			</div>
+         
 
          </form>    
                 

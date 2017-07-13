@@ -1,9 +1,17 @@
 @extends('layout1')
 
 @section('body-content')
-
-
 <div class="container">
+<form action="{{url('/storeContactMsg')}}" method="POST" role="form" enctype="multipart/form-data">
+{{csrf_field()}}
+    <div>
+      @if(session('msg'))
+        <div class="alert alert-success">
+          {{session('msg')}}
+        </div>
+      @endif
+    </div>
+
      <div class="row">
        <div class="col-md-6">
          <form role="form" action="/action_page.php">
@@ -45,5 +53,6 @@
   </form>
        </div>
      </div>
+</form>
 </div>
 @endsection

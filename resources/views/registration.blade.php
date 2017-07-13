@@ -1,6 +1,18 @@
 @extends('layout1')
 
 @section('body-content')
+
+<div class="container">
+<form action="{{url('/storeClient')}}" method="POST" role="form" enctype="multipart/form-data">
+{{csrf_field()}}
+    <div>
+      @if(session('msg'))
+        <div class="alert alert-success">
+          {{session('msg')}}
+        </div>
+      @endif
+    </div>
+
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
     <form role="form">
@@ -24,7 +36,7 @@
 
       
       <div class="form-group">
-        <input type="text" name="phoneNO" id="display_name" class="form-control input-lg" placeholder="Phone/Mobile number" tabindex="3">
+        <input type="text" name="phNo" id="display_name" class="form-control input-lg" placeholder="Phone/Mobile number" tabindex="3">
         {!!$errors->first('phoneNO','<span class="help-block">:message</span>')!!}
       </div>
       <div class="form-group">
@@ -82,4 +94,5 @@
 </div><!-- /.modal -->
 </div>
 <h1></h1>
+</div>  <!-- container end -->
 @endsection

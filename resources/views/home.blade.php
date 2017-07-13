@@ -1,82 +1,108 @@
 @extends('layout1')
 
 @section('body-content')
- <header class="business-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="tagline">Business Name or Tagline</h1>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Page Content -->
-    <div class="container">
-
-        <hr>
+    <div class="container-fluid">
 
         <div class="row">
-            <div class="col-sm-8">
-                <h2>What We Do</h2>
-                <p>Introduce the visitor to the business using clear, informative text. Use well-targeted keywords within your sentences to make sure search engines can find the business.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et molestiae similique eligendi reiciendis sunt distinctio odit? Quia, neque, ipsa, adipisci quisquam ullam deserunt accusantium illo iste exercitationem nemo voluptates asperiores.</p>
-                <p>
-                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
-                </p>
-            </div>
-            <div class="col-sm-4">
-                <h2>Contact Us</h2>
-                <address>
-                    <strong>Start Bootstrap</strong>
-                    <br>3481 Melrose Place
-                    <br>Beverly Hills, CA 90210
-                    <br>
-                </address>
-                <address>
-                    <abbr title="Phone">P:</abbr>(123) 456-7890
-                    <br>
-                    <abbr title="Email">E:</abbr> <a href="mailto:#">name@example.com</a>
-                </address>
-            </div>
-        </div>
-        <!-- /.row -->
 
-        <hr>
+                <div class="row carousel-holder">
 
-        <div class="row">
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #1</h2>
-                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
-            </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #2</h2>
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Marketing Box #3</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
-        </div>
-        <!-- /.row -->
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="images/slide01.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/slide02.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/slide03.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="images/slide04.jpg" alt="">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
 
-        <hr>
+                </div>
+                </div>
+  <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+            <div class="row">   
+            <div class="col-md-3">
+                <p class="lead">Categories</p>
+                <hr>
+                <div class="list-group">
+                    <a href="{{url('menHealthPill')}}" class="list-group-item">Men Health Pills</a>
+                    <a href="#" class="list-group-item">Women Health Products</a>
+                    <a href="#" class="list-group-item">AntiCoagulants</a>
+                    <a href="#" class="list-group-item">Anti Depressant</a>
+                    <a href="#" class="list-group-item">Asthma</a>
+                    <a href="#" class="list-group-item">Anti Emetic</a>
+                    <a href="#" class="list-group-item">Quit Smoking</a>
+                    <a href="#" class="list-group-item">Hair Loss</a>
+                    <a href="#" class="list-group-item">AntiCancer</a>
+                    <a href="#" class="list-group-item">Digestive System</a>
+                    <a href="#" class="list-group-item">Epilepsy </a>
+                    <a href="#" class="list-group-item">Anthelmintic or Anti Worm</a>
+                    <a href="#" class="list-group-item">Herpes and HIV PIlls</a>
+                    <a href="#" class="list-group-item">Alzheimers</a>
+                    <a href="#" class="list-group-item">Anti Alcohol Pills</a>
+                    <a href="#" class="list-group-item">Eye Care</a>
+                    <a href="#" class="list-group-item">Vitamins And Harmones</a>
+                    <a href="#" class="list-group-item">Bladder Prostate</a>
+                    <a href="#" class="list-group-item">Heart and Blood Pressure</a>
+                    <a href="#" class="list-group-item">Diabetes</a>
+                    <a href="#" class="list-group-item">Immunosuppressive</a>
+                    <a href="#" class="list-group-item">Category 23</a>
                 </div>
             </div>
-            <!-- /.row -->
-        </footer>
+<!--      </div>    -->
+<h3><strong>Featured Products</strong></h3>
 
-    </div>
-    <!-- /.container -->
+@foreach($medicines->chunk(4) as $medicineChunk)
+<!-- <div class="row"> -->
+
+@foreach($medicineChunk as $medicine)
+<div class="col-md-3">
+    <div class="thumbnail">
+        <img src="img/eybil160.jpg{{$medicine->img}}" alt="" class="img-responsive">
+            <div class="caption">            
+                 <h4>{{ $medicine->medicine_name }}</h4>
+                 <p class="description">{{ $medicine->medicine_descr }}</p>
+                     <!-- <p align="center">Manufactured By:Squar.</p> -->
+            </div>
+            
+              <div class="clearfix">
+                  <h5 class="pull-left">{{ $medicine->price }}</h5>
+                  <a href="{{url('medicineDetail')}}" class="btn btn-primary pull-right" role="button">View Details</a>
+                    <!-- <a href="#" class="btn btn-primary pull-left" role="button" >Buy Now</a>
+                    <a href="#" class="btn btn-success pull-right" role="button">Add to cart</a> -->
+              </div>
+      
+   </div>
+  </div>
+@endforeach
+</div>
+@endforeach
+
+
+        <hr>
+
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
