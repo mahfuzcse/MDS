@@ -3,7 +3,7 @@
       
      @foreach($medicines as $medicine)
                   
-                  <a href="#">{{ $medicine->medicine_name}}
+                  <a href="{{route('medicineDetail',['id'=>$medicine->id]) }}">{{ $medicine->medicine_name}}
                   </a>
                   <br>
         @endforeach

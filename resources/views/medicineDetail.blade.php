@@ -19,11 +19,11 @@
       <tr>
         <td>
              <div class="form-group">
-                <img src="images/xx55.jpg" alt="image-responsive" style="width: 80px;height: 80px;"></td>
+                <img src="{{asset('images').'/'.$md->img}}" alt="image-responsive" style="width: 80px;height: 80px;"></td>
              </div>
         <td>
             <div class="form-group">
-               <label for="">{{ $md->medicine_name}} </label>
+               <label for="">{{ $md->medicine_name }} </label>
             </div>
         </td>
     
@@ -45,13 +45,13 @@
            </div>
         </td>
         <td>
-	      <a href="#" class="btn btn-success pull-right" role="button">Add to cart</a>
+	      <a href="" class="btn btn-success pull-right" role="button">Add to cart</a>
 	    </td>
       </tr>
      </tbody>
   </table>
 </div>
-
+<hr>
 <script type="text/javascript">
 $(document).ready(function(){
 

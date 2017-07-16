@@ -74,13 +74,13 @@
 <!--      </div>    -->
 <h3><strong>Featured Products</strong></h3>
 
-@foreach($medicines->chunk(4) as $medicineChunk)
+@foreach($medicines->chunk(15) as $medicineChunk)
 <!-- <div class="row"> -->
 
 @foreach($medicineChunk as $medicine)
 <div class="col-md-3">
     <div class="thumbnail">
-        <img src="img/eybil160.jpg{{$medicine->img}}" alt="" class="img-responsive">
+        <img src="{{asset('images').'/'.$medicine->img}}" alt="" class="img-responsive">
             <div class="caption">            
                  <h4>{{ $medicine->medicine_name }}</h4>
                  <p class="description">{{ $medicine->medicine_descr }}</p>
@@ -89,7 +89,7 @@
             
               <div class="clearfix">
                   <h5 class="pull-left">{{ $medicine->price }}</h5>
-                  <a href="{{url('medicineDetail')}}" class="btn btn-primary pull-right" role="button">View Details</a>
+                  <a href="{{route('medicineDetail',['id'=>$medicine->id])}}" class="btn btn-primary pull-right" role="button">View Details</a>
                     <!-- <a href="#" class="btn btn-primary pull-left" role="button" >Buy Now</a>
                     <a href="#" class="btn btn-success pull-right" role="button">Add to cart</a> -->
               </div>

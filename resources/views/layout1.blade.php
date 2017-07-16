@@ -67,7 +67,7 @@
      <div class="col-sm-3">
               <div class="btn btn-block btn-success" style="background-color: #00cc66;color:#fff; width: 200px; height: 46px;">
            <a href="{{url('ordersummary')}}">
-           <img src="images/cart_icon.jpg" alt="" title="" class="vam mr10" style="width: 30px;">0</a> item, in your cart
+           <img src="{{asset('images/cart_icon.jpg')}}" alt="" title="" class="vam mr10" style="width: 30px;">0</a> item, in your cart
         </div>
    </div> 
 
